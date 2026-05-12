@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MUUSE</title>
+    <meta name="description" content="Get in touch with the MUUSE team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        Free shipping for orders over $50
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links left-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="./assets/logo.png" alt="MUUSE Logo" class="logo-img">
+                </a>
+            </div>
+
+            <ul class="nav-links right-links">
+                <li><a href="account.html">Account</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (0)</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1 class="title">Get in Touch</h1>
+        <p>We'd love to hear from you. Drop us a line.</p>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="contact-page-content fade-in">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Customer Service</h3>
+                <p>Have questions about a product or an order? Our team is here to help.</p>
+                    <p>Instagram: <a href="https://instagram.com/muuse.rd" target="_blank" rel="noopener">@muuse.rd</a></p>
+                <p>Hours: Mon-Fri 9am - 5pm EST</p>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="order">Order Question</option>
+                            <option value="press">Press & Partnerships</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button submit-btn">Send Message</button>
+                    <p id="contact-success" class="success-message" style="display: none; margin-top: 1rem; color: var(--clr-accent-dark);">Thank you! Your message has been sent.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content... -->
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="logo-text">MUUSE</h2>
+                <p>Care for yourself • Care for others</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Shop</h4>
+                    <a href="shop.html#scrubs">Scrubs</a>
+                    <a href="shop.html#soaps">Soaps</a>
+                    <a href="shop.html#candles">Candles</a>
+                    <a href="shop.html#lotions">Lotions</a>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Join our community</h4>
+                <p>Receive updates on new launches and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MUUSE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('contact-success').style.display = 'block';
+            e.target.reset();
+            setTimeout(() => {
+                document.getElementById('contact-success').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
